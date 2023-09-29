@@ -1,6 +1,10 @@
 <main>
-    <h1>Marine Schulz</h1>
-    <p>Developer</p>
+    <h1 class="text-5xl">
+        Marine Schulz
+    </h1>
+    <p class="text-3xl">
+        Developer
+    </p>
 </main>
 
 <style lang="postcss">
