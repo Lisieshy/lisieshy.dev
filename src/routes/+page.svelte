@@ -1,9 +1,14 @@
-<h1 class="text-3xl font-bold underline">
-    Hello World!
-</h1>
+<main>
+    <h1>Marine Schulz</h1>
+    <p>Developer</p>
+</main>
 
 <style lang="postcss">
-    :global(html) {
-        background-color: theme(colors.gray.100);
+    :global(h1) {
+
+        color: theme(colors.rosePine.text);
+    }
+    :global(p) {
+        color: theme(colors.rosePine.subtle);
     }
 </style>

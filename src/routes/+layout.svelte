@@ -3,3 +3,9 @@
 </script>
 
 <slot />
+
+<style lang="postcss">
+    :global(html) {
+        background-color: theme(colors.rosePine.base);
+    }
+</style>
