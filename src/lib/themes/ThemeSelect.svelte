@@ -4,7 +4,7 @@
     import { onMount } from "svelte";
     import { themes } from ".";
 
-    let current_theme = '';
+    let current_theme = 'rosePine';
 
     onMount(() => {
         if (typeof window !== 'undefined') {
@@ -29,20 +29,30 @@
         }
     };
 </script>
-
-<div class="mb-8">
-    <select
-        bind:value={current_theme}
-        data-choose-theme
-        on:change={set_theme}
-    >
-        <option value="" disabled={current_theme !== ''}>
-            {$t('menu.theme.pick')}
+<!-- 
+<select
+    bind:value={current_theme}
+    data-choose-theme
+    on:change={set_theme}
+>
+    {#each themes as theme}
+        <option value={theme}>
+            {$t(`menu.theme.${theme}`)}
         </option>
-        {#each themes as theme}
-            <option value={theme}>
-                {$t(`menu.theme.${theme}`)}
-            </option>
-        {/each}
-    </select>
+    {/each}
+</select> -->
+
+{#each themes as theme}
+<div class="form-control">
+    <label class="label cursor-pointer">
+        {$t(`menu.theme.${theme}`)}
+        <input
+            type="radio"
+            value={theme}
+            class="radio"
+            bind:group={current_theme}
+            on:change={set_theme}
+        />
+    </label>
 </div>
+{/each}

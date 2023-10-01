@@ -12,19 +12,19 @@
         goto(redirectTo);
     }
 </script>
-<!-- <div class="h-screen bg-base"> -->
 
 <nav>
-    <select on:change={handleLocaleSelection}>
-        {#each $locales as l}
-        <option value="/{l}{route}" selected="{l === $locale}">{$t(`lang.${l}`)}</option>
-        {/each}
-    </select>
     <a href="/{$locale}">{$t('menu.home')}</a>
 </nav>
 
 <slot />
 
 <ThemeSelect />
-
-<!-- </div> -->
+<select 
+    on:change={handleLocaleSelection}
+    class="select select-bordered w-full max-w-fit"
+>
+{#each $locales as l}
+    <option value="/{l}{route}" selected="{l === $locale}">{$t(`lang.${l}`)}</option>
+{/each}
+</select>
