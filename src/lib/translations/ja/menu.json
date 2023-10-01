@@ -1,3 +1,7 @@
 {
-    "home": "ホームページ"
+    "home": "ホームページ",
+    "theme.pick": "テーマを選択",
+    "theme.rosePine": "Rosé Pine",
+    "theme.rosePineDawn": "Rosé Pine Dawn",
+    "theme.rosePineMoon": "Rosé Pine Moon"
 }

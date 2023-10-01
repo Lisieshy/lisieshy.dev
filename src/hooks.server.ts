@@ -1,10 +1,26 @@
+import { sequence } from "@sveltejs/kit/hooks";
+import { themes } from "$lib/themes";
 import type { Handle } from "@sveltejs/kit";
 import type { HandleServerError } from "@sveltejs/kit";
 import { defaultLocale, loadTranslations, locales } from "$lib/translations";
 
+const handleTheme: Handle = async ({ event, resolve }) => {
+    const theme = event.cookies.get('theme');
+
+    if (!theme || !themes.includes(theme)) {
+        return await resolve(event);
+    }
+
+    return await resolve(event, {
+        transformPageChunk: ({ html }) => {
+            return html.replace('data-theme=""', `data-theme="${theme}"`);
+        }
+    });
+}
+
 const routeRegex = new RegExp(/^\/[^.]*([?#].*)?$/);
 
-export const handle: Handle = async ({ event, resolve }) => {
+const handleLocales: Handle = async ({ event, resolve }) => {
     const { url, request, isDataRequest } = event;
     const { pathname, origin } = url;
 
@@ -72,11 +88,18 @@ export const handle: Handle = async ({ event, resolve }) => {
     return resolve(event);
 };
 
+export const handle = sequence(handleTheme, handleLocales);
+
 export const handleError: HandleServerError = async ({ error, event }) => {
     const { locals } = event;
     const { lang } = locals;
 
     await loadTranslations(lang, 'error');
 
-    return { message: "Whoops!", locals };
+    const { message } = error as Error;
+
+    return { 
+        message: message,
+        locals
+    };
 };

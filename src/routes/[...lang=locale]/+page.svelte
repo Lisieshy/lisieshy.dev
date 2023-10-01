@@ -6,7 +6,7 @@
         Developer
     </p>
 </main>
-
+<!-- 
 <style lang="postcss">
     :global(h1) {
 
@@ -15,4 +15,4 @@
     :global(p) {
         color: theme(colors.rosePine.subtle);
     }
-</style>
+</style> -->

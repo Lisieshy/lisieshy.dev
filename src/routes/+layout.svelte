@@ -1,5 +1,6 @@
 <script lang="ts">
     import "../app.css";
+    import ThemeSelect from "$lib/themes/ThemeSelect.svelte";
     import { t, locales, locale } from '$lib/translations';
     import { page } from '$app/stores';
     import { goto } from '$app/navigation';
@@ -11,19 +12,19 @@
         goto(redirectTo);
     }
 </script>
+<!-- <div class="h-screen bg-base"> -->
 
-<a href="/{$locale}">{$t('menu.home')}</a>
+<nav>
+    <select on:change={handleLocaleSelection}>
+        {#each $locales as l}
+        <option value="/{l}{route}" selected="{l === $locale}">{$t(`lang.${l}`)}</option>
+        {/each}
+    </select>
+    <a href="/{$locale}">{$t('menu.home')}</a>
+</nav>
 
 <slot />
 
-<select on:change={handleLocaleSelection}>
-    {#each $locales as l}
-        <option value="/{l}{route}" selected="{l === $locale}">{$t(`lang.${l}`)}</option>
-    {/each}
-</select>
+<ThemeSelect />
 
-<style lang="postcss">
-    :global(html) {
-        background-color: theme(colors.rosePine.base);
-    }
-</style>
+<!-- </div> -->

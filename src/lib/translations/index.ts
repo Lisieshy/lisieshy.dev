@@ -68,9 +68,9 @@ export const { t, locale, locales, loading, addTranslations, loadTranslations, t
 
 loading.subscribe(async ($loading) => {
     if ($loading) {
-        console.log("Loading translations...");
+        // console.log("Loading translations...");
 
         await loading.toPromise();
-        console.log("Updated translations!", translations.get());
+        // console.log("Updated translations!", translations.get());
     }
 });
