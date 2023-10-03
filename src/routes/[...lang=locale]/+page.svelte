@@ -1,18 +1,10 @@
 <main>
-    <h1 class="text-5xl">
-        Marine Schulz
-    </h1>
-    <p class="text-3xl">
+    <h2 class="text-6xl font-extralight">
+        <span class="bg-clip-text text-transparent bg-gradient-to-r from-primary to-secondary">
+            Marine Schulz
+        </span>
+    </h2>
+    <p class="text-4xl">
         Developer
     </p>
 </main>
-<!-- 
-<style lang="postcss">
-    :global(h1) {
-
-        color: theme(colors.rosePine.text);
-    }
-    :global(p) {
-        color: theme(colors.rosePine.subtle);
-    }
-</style> -->

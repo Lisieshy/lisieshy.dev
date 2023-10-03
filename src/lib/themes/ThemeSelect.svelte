@@ -29,30 +29,15 @@
         }
     };
 </script>
-<!-- 
-<select
-    bind:value={current_theme}
-    data-choose-theme
-    on:change={set_theme}
->
-    {#each themes as theme}
-        <option value={theme}>
-            {$t(`menu.theme.${theme}`)}
-        </option>
-    {/each}
-</select> -->
 
+<select
+    on:change={set_theme}
+    bind:value={current_theme}
+    class="select select-bordered max-w-fit"
+>
 {#each themes as theme}
-<div class="form-control">
-    <label class="label cursor-pointer">
+    <option value={theme}>
         {$t(`menu.theme.${theme}`)}
-        <input
-            type="radio"
-            value={theme}
-            class="radio"
-            bind:group={current_theme}
-            on:change={set_theme}
-        />
-    </label>
-</div>
+    </option>
 {/each}
+</select>
