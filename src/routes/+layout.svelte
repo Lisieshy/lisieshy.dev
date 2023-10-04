@@ -4,6 +4,8 @@
     import { t, locales, locale } from '$lib/translations';
     import { page } from '$app/stores';
     import { goto } from '$app/navigation';
+    import { Canvas } from "@threlte/core";
+    import Background from "$lib/Background.svelte";
 
     $: ({ route } = $page.data);
 
@@ -12,8 +14,6 @@
         goto(redirectTo);
     }
 
-    import { Canvas } from "@threlte/core";
-    import Background from "$lib/Background.svelte";
 </script>
 
 <svelte:head>
@@ -21,7 +21,7 @@
 </svelte:head>
 
 <div class="flex flex-col h-screen">
-    <div class="relative box-content border h-screen m-8 overflow-hidden">
+    <div class="relative box-content border border-primary h-screen m-8 overflow-hidden">
         <div class="absolute left-0 top-0 p-4 z-10">
             <slot />
             <nav>
@@ -35,7 +35,7 @@
 
         <div class="absolute bottom-0 left-0 p-4">
             <ThemeSelect />
-            <select 
+            <select
                 on:change={handleLocaleSelection}
                 class="select select-bordered w-full max-w-fit"
             >

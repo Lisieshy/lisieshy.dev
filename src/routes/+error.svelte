@@ -1,23 +1,24 @@
 <script lang="ts">
     import { page } from "$app/stores";
-    import { t, locale } from "$lib/translations";
+    import { t } from "$lib/translations";
 
     const { status } = $page;
 </script>
-
-<h1 class="text-6xl font-bold">
-    {$t('error.shit.happens')} ({status})
-</h1>
+<h2 class="text-6xl font-bold">
+    <span class="bg-clip-text text-transparent bg-gradient-to-r from-primary to-secondary">
+        {$t('error.shit.happens')} ({status})
+    </span>
+</h2>
 <p class="text-2xl">
     {$t(`error.${status}`, { default: $t('error.default') })}
 </p>
-
+<!-- 
 <br>
-<br>
+<br> -->
 
-<p class="text-1xl">
+<!-- <p class="text-1xl">
     {$locale} – {$t(`lang.${$locale}`)}
-</p>
+</p> -->
 <!-- 
 <style lang="postcss">
     :global(h1) {
