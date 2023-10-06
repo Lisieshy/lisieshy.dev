@@ -36,7 +36,6 @@
 	},
 	"type": "module",
 	"dependencies": {
-		"@threlte/core": "^6.0.9",
 		"dotenv": "^16.3.1",
 		"sveltekit-i18n": "^2.4.2",
 		"three": "^0.157.0"

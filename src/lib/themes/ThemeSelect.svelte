@@ -33,7 +33,7 @@
 <select
     on:change={set_theme}
     bind:value={current_theme}
-    class="select select-bordered max-w-fit"
+    class="select select-bordered select-sm max-w-fit"
 >
 {#each themes as theme}
     <option value={theme}>
