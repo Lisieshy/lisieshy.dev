@@ -6,6 +6,8 @@
 
     let current_theme = 'rosePine';
 
+    export let className: string;
+
     onMount(() => {
         if (typeof window !== 'undefined') {
             const theme = window.localStorage.getItem('theme');
@@ -33,7 +35,7 @@
 <select
     on:change={set_theme}
     bind:value={current_theme}
-    class="select select-bordered select-sm max-w-fit"
+    class={className}
 >
 {#each themes as theme}
     <option value={theme}>
