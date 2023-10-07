@@ -15,9 +15,8 @@ const config = {
         },
         {
             locale: "en",
-            key: "home",
-            routes: ['', '/'],
-            loader: async () => (await import("./en/home.json")).default,
+            key: "main",
+            loader: async () => (await import("./en/main.json")).default,
         },
         {
             locale: "en",
@@ -32,9 +31,8 @@ const config = {
         },
         {
             locale: "fr",
-            key: "home",
-            routes: ['', '/'],
-            loader: async () => (await import("./fr/home.json")).default,
+            key: "main",
+            loader: async () => (await import("./fr/main.json")).default,
         },
         {
             locale: "fr",
@@ -49,9 +47,8 @@ const config = {
         },
         {
             locale: "ja",
-            key: "home",
-            routes: ['', '/'],
-            loader: async () => (await import("./ja/home.json")).default,
+            key: "main",
+            loader: async () => (await import("./ja/main.json")).default,
         },
         {
             locale: "ja",
