@@ -3,18 +3,32 @@
     export let title: string;
     export let locale: string;
     export let isActive: boolean;
+
+    import { goto } from "$app/navigation";
+
+    function navigate(event: Event) {
+        event.preventDefault();
+        goto(`/${locale}${href}`, { replaceState: true });
+    }
 </script>
 
-<a href="/{locale}{href}"
-    class="tooltip tooltip-right md:tooltip-open bg-base-100 text-neutral-content rounded-full p-3 mt-4"
+<div
+    class="tooltip tooltip-right tooltip-open"
     data-tip="{title}"
-    class:selected="{isActive}"
     >
-    <slot />
-</a>
+    <button
+        class="btn btn-circle btn-primary btn-outline"
+        class:selected="{isActive}"
+        on:click={navigate}
+    >
+        <slot name="icon" />
+    </button>
+</div>
 
 <style>
-    a.selected {
-        color: hsl(var(--wa));
+    button.selected {
+        color: hsl(var(--pc));
+        background-color: hsl(var(--pf));
+        border: 2px solid hsl(var(--pf));
     }
 </style>

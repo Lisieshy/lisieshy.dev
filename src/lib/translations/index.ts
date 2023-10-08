@@ -25,6 +25,12 @@ const config = {
             loader: async () => (await import("./en/error.json")).default,
         },
         {
+            locale: "en",
+            key: "home",
+            routes: ['', '/'],
+            loader: async () => (await import("./en/home.json")).default,
+        },
+        {
             locale: "fr",
             key: "menu",
             loader: async () => (await import("./fr/menu.json")).default,
@@ -41,6 +47,12 @@ const config = {
             loader: async () => (await import("./fr/error.json")).default,
         },
         {
+            locale: "fr",
+            key: "home",
+            routes: ['', '/'],
+            loader: async () => (await import("./fr/home.json")).default,
+        },
+        {
             locale: "ja",
             key: "menu",
             loader: async () => (await import("./ja/menu.json")).default,
@@ -55,6 +67,12 @@ const config = {
             key: "error",
             routes: ['error'],
             loader: async () => (await import("./ja/error.json")).default,
+        },
+        {
+            locale: "ja",
+            key: "home",
+            routes: ['', '/'],
+            loader: async () => (await import("./ja/home.json")).default,
         },
     ],
 };
