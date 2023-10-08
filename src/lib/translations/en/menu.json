@@ -1,6 +1,8 @@
 {
     "home": "Home",
     "aboutme": "About me",
+    "projects": "Projects",
+    "contact": "Contact",
     "settings": "Language and theme settings",
     "theme": "Theme",
     "theme.rosePine": "Rosé Pine",

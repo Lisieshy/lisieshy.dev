@@ -1,6 +1,8 @@
 {
     "home": "ホームページ",
     "aboutme": "私について",
+    "projects": "プロジェクト",
+    "contact": "連絡先",
     "settings": "言語とテーマの設定",
     "theme": "テーマ",
     "theme.rosePine": "Rosé Pine",

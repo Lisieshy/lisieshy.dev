@@ -1,33 +1,20 @@
 <script lang="ts">
-    import { page } from '$app/stores';
-    import { defaultLocale } from '$lib/translations';
-	import { onMount } from 'svelte';
     export let href: string;
     export let title: string;
     export let locale: string;
-
-    $: isActive = () => {
-        const path = $page.url.pathname;
-        const localePrefix = locale === defaultLocale ? '/' : `/${locale}`;
-
-        if (path === href || path === `${localePrefix}${href}`) {
-            return true;
-        }
-        return false;
-    }
-
-    let ready = false;
-    onMount(() => {
-        ready = true;
-    });
+    export let isActive: boolean;
 </script>
 
-<a href="/{locale}{href}" class="link" class:active="{isActive()}">
-    {title}
+<a href="/{locale}{href}"
+    class="tooltip tooltip-right md:tooltip-open bg-base-100 text-neutral-content rounded-full p-3 mt-4"
+    data-tip="{title}"
+    class:selected="{isActive}"
+    >
+    <slot />
 </a>
 
 <style>
-    a.active {
-        background-color: orange;
+    a.selected {
+        color: hsl(var(--wa));
     }
 </style>

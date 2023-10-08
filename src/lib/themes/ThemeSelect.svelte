@@ -4,7 +4,7 @@
     import { onMount } from "svelte";
     import { themes } from ".";
 
-    let current_theme = 'rosePine';
+    export let current_theme = 'rosePine';
 
     export let className: string;
 

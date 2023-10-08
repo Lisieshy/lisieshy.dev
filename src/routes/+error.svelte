@@ -12,19 +12,3 @@
 <p class="text-3xl font-light md:text-5xl xl:text-6xl">
     {$t(`error.${status}`, { default: $t('error.default') })}
 </p>
-<!-- 
-<br>
-<br> -->
-
-<!-- <p class="text-1xl">
-    {$locale} – {$t(`lang.${$locale}`)}
-</p> -->
-<!-- 
-<style lang="postcss">
-    :global(h1) {
-        color: theme(colors.rosePine.text);
-    }
-    :global(p) {
-        color: theme(colors.rosePine.subtle);
-    }
-</style> -->

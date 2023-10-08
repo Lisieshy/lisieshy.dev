@@ -24,9 +24,8 @@
         <slot name="header" />
         <hr />
         <slot />
-        <!-- svelte-ignore a11y-autofocus -->
-        <form method="dialog" class="modal-backdrop">
-            <button autofocus on:click={() => dialog.close()}>close modal</button>
-        </form>
     </div>
+    <form method="dialog" class="modal-backdrop">
+        <button>close</button>
+    </form>
 </dialog>
