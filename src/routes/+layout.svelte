@@ -90,7 +90,7 @@
 
 
         {#key data.pathname}
-            <div class="absolute bottom-0 right-0 p-4 text-right max-w-md"
+            <div class="absolute bottom-0 right-0 p-4 max-w-md"
                 in:fade={{ duration: 400, delay: 300 }}
                 out:fade={{ duration: 200 }}
             >

@@ -31,6 +31,24 @@ const config = {
             loader: async () => (await import("./en/home.json")).default,
         },
         {
+            locale: "en",
+            key: "about",
+            routes: ['/about'],
+            loader: async () => (await import("./en/about.json")).default,
+        },
+        {
+            locale: "en",
+            key: "projects",
+            routes: ['/projects'],
+            loader: async () => (await import("./en/projects.json")).default,
+        },
+        {
+            locale: "en",
+            key: "contact",
+            routes: ['/contact'],
+            loader: async () => (await import("./en/contact.json")).default,
+        },
+        {
             locale: "fr",
             key: "menu",
             loader: async () => (await import("./fr/menu.json")).default,
@@ -53,6 +71,24 @@ const config = {
             loader: async () => (await import("./fr/home.json")).default,
         },
         {
+            locale: "fr",
+            key: "about",
+            routes: ['/about'],
+            loader: async () => (await import("./fr/about.json")).default,
+        },
+        {
+            locale: "fr",
+            key: "projects",
+            routes: ['/projects'],
+            loader: async () => (await import("./fr/projects.json")).default,
+        },
+        {
+            locale: "fr",
+            key: "contact",
+            routes: ['/contact'],
+            loader: async () => (await import("./fr/contact.json")).default,
+        },
+        {
             locale: "ja",
             key: "menu",
             loader: async () => (await import("./ja/menu.json")).default,
@@ -73,6 +109,24 @@ const config = {
             key: "home",
             routes: ['', '/'],
             loader: async () => (await import("./ja/home.json")).default,
+        },
+        {
+            locale: "ja",
+            key: "about",
+            routes: ['/about'],
+            loader: async () => (await import("./ja/about.json")).default,
+        },
+        {
+            locale: "ja",
+            key: "projects",
+            routes: ['/projects'],
+            loader: async () => (await import("./ja/projects.json")).default,
+        },
+        {
+            locale: "ja",
+            key: "contact",
+            routes: ['/contact'],
+            loader: async () => (await import("./ja/contact.json")).default,
         },
     ],
 };
