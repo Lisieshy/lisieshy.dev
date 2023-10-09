@@ -32,7 +32,7 @@
         </div>
 
         <div class="absolute left-0 top-0 p-4 z-10">
-            <div class="relative w-max">
+            <div class="relative">
                 <h2 class="text-5xl font-thin md:text-7xl">
                     <span class="bg-clip-text text-transparent bg-gradient-to-r from-primary to-secondary">
                         {$t('main.name')}
@@ -60,7 +60,7 @@
                             title="{$t('menu.aboutme')}"
                             isActive={data.pathname === '/about'}
                         >
-                        <svg slot="icon" class="h-6 w-6" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 10C12.5523 10 13 10.4477 13 11V16C13 16.5523 12.5523 17 12 17C11.4477 17 11 16.5523 11 16V11C11 10.4477 11.4477 10 12 10Z" fill="currentColor"/><path d="M12 7C12.5523 7 13 7.44772 13 8C13 8.55228 12.5523 9 12 9C11.4477 9 11 8.55228 11 8C11 7.44772 11.4477 7 12 7Z" fill="currentColor"/><path fill-rule="evenodd" clip-rule="evenodd" d="M2 12C2 6.47715 6.47715 2 12 2C17.5228 2 22 6.47715 22 12C22 17.5228 17.5228 22 12 22C6.47715 22 2 17.5228 2 12ZM12 4C7.58172 4 4 7.58172 4 12C4 16.4183 7.58172 20 12 20C16.4183 20 20 16.4183 20 12C20 7.58172 16.4183 4 12 4Z" fill="currentColor"/></svg>
+                            <svg slot="icon" class="h-6 w-6" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 10C12.5523 10 13 10.4477 13 11V16C13 16.5523 12.5523 17 12 17C11.4477 17 11 16.5523 11 16V11C11 10.4477 11.4477 10 12 10Z" fill="currentColor"/><path d="M12 7C12.5523 7 13 7.44772 13 8C13 8.55228 12.5523 9 12 9C11.4477 9 11 8.55228 11 8C11 7.44772 11.4477 7 12 7Z" fill="currentColor"/><path fill-rule="evenodd" clip-rule="evenodd" d="M2 12C2 6.47715 6.47715 2 12 2C17.5228 2 22 6.47715 22 12C22 17.5228 17.5228 22 12 22C6.47715 22 2 17.5228 2 12ZM12 4C7.58172 4 4 7.58172 4 12C4 16.4183 7.58172 20 12 20C16.4183 20 20 16.4183 20 12C20 7.58172 16.4183 4 12 4Z" fill="currentColor"/></svg>
                         </NavLink>
                     </li>
                     <li>
@@ -90,7 +90,7 @@
 
 
         {#key data.pathname}
-            <div class="absolute bottom-0 right-0 p-4 max-w-md"
+            <div class="absolute bottom-0 right-0 p-4 max-w-[16rem] md:max-w-lg"
                 in:fade={{ duration: 400, delay: 300 }}
                 out:fade={{ duration: 200 }}
             >

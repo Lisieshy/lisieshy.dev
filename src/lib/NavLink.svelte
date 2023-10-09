@@ -13,7 +13,7 @@
 </script>
 
 <div
-    class="tooltip tooltip-right tooltip-open"
+    class="tooltip tooltip-right sm:tooltip-open"
     data-tip="{title}"
     >
     <button
