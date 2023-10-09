@@ -16,7 +16,7 @@
         goto(redirectTo);
     }
 
-    let current_theme = '';
+    let current_theme = 'rosePine';
     let showModal = false;
 </script>
 
