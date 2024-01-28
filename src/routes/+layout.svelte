@@ -24,9 +24,9 @@
     <title>Marine Schulz</title>
 </svelte:head>
 
-<div class="flex flex-col h-screen bg-neutral">
-    <div class="relative box-content border bg-base-100 border-primary h-screen m-4 md:m-8 overflow-hidden">
-        <div class="relative h-screen w-screen -top-[70rem] -left-[40rem]">
+<div class="flex flex-col h-[100svh] bg-neutral">
+    <div class="relative box-content border bg-base-100 border-primary h-[100svh] m-4 md:m-8 overflow-hidden">
+        <div class="relative h-[100svh] w-screen -top-[70rem] -left-[40rem]">
             <div class="absolute rounded-[43%] -one w-[100rem] h-[90rem] md:w-[130rem] md:h-[120rem]"></div>
             <div class="absolute rounded-[43%] -two w-[100rem] h-[90rem] md:w-[130rem] md:h-[120rem]"></div>
         </div>
